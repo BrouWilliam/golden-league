@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 /* === Reset ===*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -15,8 +26,11 @@ img {
 }
 
 .container {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* === Titles === */
@@ -59,7 +73,7 @@ img {
 }
 
 .section-header p {
-  font-size: 1.25rem;
+  font-size: 18px;
   margin-top: 0;
   line-height: 1.6;
 }
@@ -69,10 +83,11 @@ img {
   display: inline-block;
   background-color: #ffd200;
   color: #1a1a1a;
-  font-size: 1.1rem;
+  font-size: 18px;
   padding: 0.4rem 1.5rem;
   font-weight: 500;
   border-radius: 7px;
+  text-align: center;
 }
 
 .button-flex {
@@ -89,6 +104,7 @@ img {
   padding: 1rem 4rem;
   font-weight: 500;
   display: inline-block;
+  text-align: center;
 }
 
 body {
@@ -105,18 +121,74 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 5rem 0;
+}
+
+header .swiper-container {
+  margin-bottom: 5rem;
+}
+
+header .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffd200 !important;
+}
+
+header .swiper-container .slide {
+  padding: 3rem 0.5rem;
+  background-color: rgba(196, 196, 196, 0.17);
+}
+
+header .swiper-container .slide .grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+}
+
+header .swiper-container .slide .grid h2 {
+  font-size: 32px;
+  color: #FFF;
+}
+
+header .swiper-container .slide .grid p {
+  font-size: 18px;
+  color: #FFF;
 }
 
 header .header-cards .grid {
   display: -ms-grid;
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 header .header-cards .grid .content {
+  position: relative;
   background-color: #242324;
   padding: 2rem;
-  border-radius: 0.75rem;
+  border-radius: 24px 4px;
+}
+
+header .header-cards .grid .content .icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: -1.75rem;
+  left: calc(20% - 2.25rem);
+  background-color: #242324;
+  border: solid #000 3px;
+  border-radius: 10rem;
+}
+
+header .header-cards .grid .content .icon i {
+  color: #ffd200;
+  font-size: 1.7rem;
 }
 
 header .header-cards .grid .content h4 {
@@ -128,7 +200,8 @@ header .header-cards .grid .content p {
 }
 
 main section.parceiros {
-  background: #FFF;
+  background: #f4f4f4;
+  padding: 5rem 0;
 }
 
 main section.parceiros h2, main section.parceiros p {
@@ -140,6 +213,7 @@ main section.parceiros .parceiros-logo .grid {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 main section.parceiros .parceiros-logo .grid .content img {
@@ -152,11 +226,122 @@ main section.parceiros .parceiros-logo .grid .content img {
 main section.parceiros .parceiros-logo .grid .content img:hover {
   -webkit-filter: none;
           filter: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main section.games {
+  padding: 5rem 0;
+}
+
+main section.games .grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+}
+
+main section.games .grid .content {
+  margin: 0 auto;
+}
+
+main section.games .grid .content .card {
+  background-color: #1a1a1a;
+  background-position: center;
+  max-width: 300px;
+  border-radius: 15px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-repeat: no-repeat;
+}
+
+main section.games .grid .content .card .pic {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+main section.games .grid .content .card .pic img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+main section.games .grid .content .card .details {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem;
+  gap: 20px;
+}
+
+main section.games .grid .content .card .details h3 {
+  font-size: 24px;
+  color: #FFF;
+}
+
+main section.games .grid .content .card .details p {
+  font-size: 18px;
+  color: #f8f9fa;
+}
+
+main section.games .grid .content .card .details a {
+  color: #f8f9fa;
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main section.games .grid .content .card .details a:hover {
+  padding-left: 10px;
 }
 
 main section.campeonato {
   background-color: #1a1a1a;
-  padding: 2rem 0;
+  padding: 5rem 0;
+}
+
+main section.campeonato .section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+main section.campeonato .section-header h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: .6rem;
+  color: #FFF;
+}
+
+main section.campeonato .section-header h2:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: .4rem;
+  color: #ffd200;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+main section.campeonato .section-header h2:after {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-end-end-radius: 3px;
+  background-color: #ffd200;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main section.campeonato .section-header p {
+  margin-top: 0;
+  line-height: 1.6;
+  color: #FFF;
 }
 
 main section.campeonato .grid .info {
@@ -164,8 +349,13 @@ main section.campeonato .grid .info {
   padding: 2rem;
   background-color: #FFF;
   border-radius: 7px 7px 0 0;
-  max-width: 265px;
   margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+}
+
+main section.campeonato .grid .info h2 {
+  margin-bottom: 0.5rem;
 }
 
 main section.campeonato .grid .info .status {
@@ -181,6 +371,7 @@ main section.campeonato .grid .info .status {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 main section.campeonato .grid .info .status h5 {
@@ -188,12 +379,13 @@ main section.campeonato .grid .info .status h5 {
 }
 
 main section.campeonato .grid .background {
-  width: 600px;
+  width: 100%;
+  max-height: 350px;
   height: 450px;
   overflow: hidden;
   position: relative;
   display: inline-block;
-  border-radius: 7px;
+  border-radius: 0 0 7px 7px;
 }
 
 main section.campeonato .grid .background .child {
@@ -203,7 +395,7 @@ main section.campeonato .grid .background .child {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 7px;
+  border-radius: 0 0 7px 7px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -215,9 +407,110 @@ main section.campeonato .grid .background .child:hover {
   transition: all .5s;
 }
 
+main section.equipe {
+  padding: 5rem 0;
+}
+
+main section.equipe .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+main section.equipe .grid .content {
+  text-align: center;
+}
+
+main section.equipe .grid .content .blob {
+  width: 200px;
+}
+
+main section.equipe .grid .content .blob .blob_img {
+  width: 200px;
+}
+
+main section.equipe .grid .content h3 {
+  font-size: 24px;
+}
+
+main section.equipe .grid .content span {
+  text-align: center;
+}
+
+main section.noticias {
+  background: #1a1a1a;
+  padding: 5rem 0;
+}
+
+main section.noticias h2 {
+  color: #FFF;
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+}
+
+main section.noticias .grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+main section.noticias .grid .content {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+main section.noticias .grid .content .card {
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-size: 100%;
+}
+
+main section.noticias .grid .content .card:hover {
+  background-size: 110%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+main section.noticias .grid .content .card .data-info {
+  padding: 1rem;
+}
+
+main section.noticias .grid .content .card .data-info h4 {
+  color: #FFF;
+  font-size: 26px;
+  margin-bottom: 0.5rem;
+}
+
+main section.noticias .grid .content .card .data-info p {
+  color: #FFF;
+  margin: 0;
+}
+
+main section.noticias .grid .flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 20px;
+}
+
 footer {
   padding-top: 4rem;
-  background: linear-gradient(115deg, #ffa000 0%, #ffd200 100%);
+  background-color: #24262b;
 }
 
 footer .copy {
@@ -229,17 +522,19 @@ footer .copy p {
   margin: 0;
   padding: 2rem 0;
   font-weight: 500;
+  color: #FFF;
 }
 
 footer .container .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ()[1fr];
-      grid-template-columns: repeat(1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 footer .container .grid .content {
   text-align: center;
+  margin: 2rem 0;
 }
 
 footer .container .grid .content img {
@@ -247,24 +542,87 @@ footer .container .grid .content img {
   height: auto;
 }
 
+footer .container .grid .content p {
+  color: #e3e3e3;
+}
+
+footer .container .grid .content span {
+  color: #e3e3e3;
+}
+
+footer .container .grid .content span a {
+  color: #e3e3e3;
+}
+
 footer .container .grid .content h4 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  color: #FFF;
+  position: relative;
+}
+
+footer .container .grid .content h4::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  left: calc(50% - 1.5rem);
+  bottom: -10px;
+  background-color: #ffd200;
+  height: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50px;
 }
 
 footer .container .grid .content ul li {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 footer .container .grid .content ul li a {
   text-decoration: none;
   font-size: 17px;
-  color: #1a1a1a;
+  color: #e3e3e3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 footer .container .grid .content ul li a:hover {
   color: #545454;
+  padding-left: 10px;
+}
+
+footer .container .grid .content ul.social_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .container .grid .content ul.social_icons .social_icon {
+  font-size: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  header .header-cards .grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  header .header-cards .grid .content {
+    padding: 3rem 2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -308,9 +666,10 @@ footer .container .grid .content ul li a:hover {
     padding: 2rem;
     border-radius: 7px;
   }
-  header .swiper-container .slide .grid h1 {
+  header .swiper-container .slide .grid h2 {
     font-size: 70px;
     color: #FFF;
+    margin-bottom: 3rem;
   }
   header .swiper-container .slide .grid p {
     font-size: 21px;
@@ -338,16 +697,16 @@ footer .container .grid .content ul li a:hover {
             align-items: center;
     top: -1.75rem;
     left: calc(20% - 2.25rem);
-    background-color: #242324;
+    background-color: #131213;
     border: solid #000 4px;
     border-radius: 10rem;
   }
   header .header-cards .grid .content .icon i {
     color: #ffd200;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   section.parceiros {
-    background: #FFF;
+    background: #f4f4f4;
     padding: 4rem 0;
   }
   section.parceiros .parceiros-logo .grid {
@@ -369,6 +728,9 @@ footer .container .grid .content ul li a:hover {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
   }
+  section.games {
+    padding: 5rem 0;
+  }
   section.games .grid {
     display: -ms-grid;
     display: grid;
@@ -382,22 +744,10 @@ footer .container .grid .content ul li a:hover {
     display: grid;
   }
   section.games .grid .content .card {
-    background-color: #ffd200;
     max-width: 300px;
     margin: 0 auto;
     padding-bottom: 1rem;
     border-radius: 15px;
-  }
-  section.games .grid .content .card img {
-    max-width: 300px;
-    border-radius: 15px;
-    height: 300px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  section.games .grid .content .card h2 {
-    color: #1a1a1a;
-    text-align: center;
   }
   section.campeonato {
     background: #1a1a1a;
@@ -534,12 +884,6 @@ footer .container .grid .content ul li a:hover {
     -webkit-transition: all .5s;
     transition: all .5s;
   }
-  section.noticias .grid .content .card:hover {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-    -webkit-transition: all .5s;
-    transition: all .5s;
-  }
   section.noticias .grid .content .card .data-info {
     padding: 1rem;
   }
@@ -561,7 +905,7 @@ footer .container .grid .content ul li a:hover {
   }
   footer {
     padding-top: 4rem;
-    background: linear-gradient(115deg, #ffa000 0%, #ffd200 100%);
+    background-color: #24262b;
   }
   footer .copy {
     margin-top: 1rem;
@@ -578,6 +922,7 @@ footer .container .grid .content ul li a:hover {
         grid-template-rows: 1fr;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
   }
   footer .container .grid .content {
     text-align: left;
@@ -586,21 +931,45 @@ footer .container .grid .content ul li a:hover {
     max-width: 55px;
     height: auto;
   }
+  footer .container .grid .content p {
+    color: #e3e3e3;
+  }
+  footer .container .grid .content span {
+    color: #e3e3e3;
+  }
+  footer .container .grid .content span a {
+    color: #e3e3e3;
+  }
   footer .container .grid .content h4 {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    color: #FFF;
+  }
+  footer .container .grid .content h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffd200;
+    height: 2px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50px;
   }
   footer .container .grid .content ul li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
   footer .container .grid .content ul li a {
     text-decoration: none;
     font-size: 17px;
-    color: #1a1a1a;
+    color: #e3e3e3;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   footer .container .grid .content ul li a:hover {
     color: #545454;
+    padding-left: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -6,20 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden League</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
+    <div class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Golden</a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <span class="nav__name">About</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <span class="nav__name">Skills</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <span class="nav__name">Notícias</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav__item">
+                        <a href="#contactme" class="nav__link">
+                            <span class="nav__name">Contactme</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <img src="assets/img/perfil.png" alt="" class="nav__img">
+        </nav>
+    </div>
     <header>
+
         <div class="container">
             <div class="containerzada swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="content slide ">
                             <div class="grid">
-                                <div class="important">
-                                    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-                                <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
+                                <div class="grid">
+                                    <h2>Campeonato Golden Ligue 1º Session</h2>
+                                    <a href="#" class="button btn-ler_mais">Inscreva-se <i class="uil uil-arrow-right"></i></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
@@ -30,9 +74,9 @@
                     <div class="swiper-slide">
                         <div class="content slide ">
                             <div class="grid">
-                                <div class="important">
-                                    <h1>Lorem ipsum dolor sit amet Salve.</h1>
-                                <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
+                                <div class="grid">
+                                    <h2>Lorem ipsum dolor sit amet Salve.</h2>
+                                    <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
@@ -44,8 +88,8 @@
                     <div class="swiper-slide">
                         <div class="content slide ">
                             <div class="grid">
-                                <div class="important">
-                                    <h1>Lorem ipsum dolor sit amet Salve.</h1>
+                                <div class="grid">
+                                    <h2>Lorem ipsum dolor sit amet Salve.</h2>
                                 <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
@@ -56,12 +100,8 @@
                     </div>
                 </div>
 
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div> -->
 
             </div>
             <div class="header-cards">
@@ -75,7 +115,7 @@
                     </div>
                     <div class="content">
                         <div class="icon">
-                            <i class="uil uil-twitter-alt icon-card"></i>
+                            <i class="uil uil-heart-alt icon-card"></i>
                         </div>
                         <h4>Comunidade</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deleniti eum, repellat quos consequuntur at.</p>
@@ -141,21 +181,39 @@
                 </div>
                 <div class="grid">
                     <div class="content">
-                        <div class="card">
-                            <img src="https://gametimes.com.br/wp-content/uploads/2020/07/valorant-pergunte-3-scaled.jpg" alt="">
-                            <h2>Valorant</h2>
+                        <div class="card"> 
+                            <div class="pic">
+                                <img src="https://gametimes.com.br/wp-content/uploads/2020/07/valorant-pergunte-3-scaled.jpg" alt="">
+                            </div>             
+                            <div class="details">
+                                <h3>Valorant</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos architecto nisi consequuntur eius nostrum nesciunt, nemo laborum aliquid cum repellat possimus, consectetur esse repudiandae incidunt sunt atque.</p>
+                                <a href="#">Saiba mais <i class="uil uil-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="content">
                         <div class="card">
-                            <img src="https://cdn1.dotesports.com/wp-content/uploads/sites/3/2020/12/31122207/call-of-duty-mobile-hero-a.jpg" alt="">
-                            <h2>Call of Duty </h2>
+                            <div class="pic">
+                                <img src="https://cdn1.dotesports.com/wp-content/uploads/sites/3/2020/12/31122207/call-of-duty-mobile-hero-a.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Call of Duty </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos architecto nisi consequuntur eius nostrum nesciunt, nemo laborum aliquid cum repellat possimus, consectetur esse repudiandae incidunt sunt atque.</p>
+                                <a href="#">Saiba mais <i class="uil uil-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="content">
                         <div class="card">
-                            <img src="https://rocketleague.media.zestyio.com/rl_platform_keyart_2019.f1cb27a519bdb5b6ed34049a5b86e317.jpg" alt="">
-                            <h2>Rockeat League </h2>
+                            <div class="pic">
+                                <img src="https://rocketleague.media.zestyio.com/rl_platform_keyart_2019.f1cb27a519bdb5b6ed34049a5b86e317.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Rockeat League </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos architecto nisi consequuntur eius nostrum nesciunt, nemo laborum aliquid cum repellat possimus, consectetur esse repudiandae incidunt sunt atque.</p>
+                                <a href="#">Saiba mais <i class="uil uil-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,6 +262,108 @@
             </div>
         </section>
 
+        <section class="equipe">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="title" data-title="Nossa equipe">Golden League</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, labore?</p>
+                </div>
+
+                <div class="grid">
+                    <div class="content">
+                        <div class="home__img">
+                            
+
+                        </div>
+                        <div class="pic">
+                            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    <image class="blob_img" href="https://scontent.fgnm5-1.fna.fbcdn.net/v/t1.6435-9/164679053_3783082191813365_8603507856972081405_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=M37VTX6_rL4AX8neT1k&_nc_ht=scontent.fgnm5-1.fna&oh=ffe4ff1e11557d85ed201a35c7338434&oe=61A801FE"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Guilher Kenzo</h3>
+                        <span>CEO</span>
+                    </div>
+                    <div class="content">
+                        <div class="pic">
+                            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    <image class="blob_img" href="https://williamportfolio.com.br/img/pic.webp"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>William Pereira</h3>
+                        <span>CTO</span>
+                    </div>
+
+                    <div class="content">
+                        <div class="pic">
+                            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    <image class="blob_img" href="https://scontent.fgnm5-1.fna.fbcdn.net/v/t1.6435-9/80251009_248384912790692_8270313816005279744_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=sNBbZMykvbcAX_Hb_D7&_nc_ht=scontent.fgnm5-1.fna&oh=ccc43ed2dc0357b4e7b7557ebf7ca7f9&oe=61A90F4F"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Sinhá Almeida</h3>
+                        <span>CTO</span>
+                    </div>
+                    <div class="content">
+                        <div class="pic">
+                            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    <image class="blob_img" href="https://scontent.fgnm5-1.fna.fbcdn.net/v/t1.6435-9/128192242_2762929217259077_2017981368588435432_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qFJPCYkvz_MAX838y85&_nc_ht=scontent.fgnm5-1.fna&oh=723a2e8469a32e1b3352095c1be5270f&oe=61A83AD7"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3>Vitinho VSL</h3>
+                        <span>CTO</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="noticias">
             <div class="container">
                 <h2>Notícias</h2>
@@ -212,7 +372,7 @@
                         <div class="card" style="background-image: url(https://istoe.com.br/wp-content/uploads/sites/14/2021/03/605b967c11209.jpeg);">
                             <div class="data-info">
                                 <h4>Nicolino volta às origens no maior torneio mundial de VALORANT para universitários</h4>
-                            <p>Caster oficial do Red Bull Campus Clutch, narrador relembra trajetória entre os estudantes e vê Brasil como grande potência no evento.</p>
+                                <p>Caster oficial do Red Bull Campus Clutch, narrador relembra trajetória entre os estudantes e vê Brasil como grande potência no evento.</p>
                             </div>
                         </div>
                     </div>
@@ -221,7 +381,7 @@
                             <div class="card" style="background-image: url(https://static.valorantzone.gg/news/2021/06/21184724/valorant-masters-islandia.jpg);">
                                 <div class="data-info">
                                     <h4>Lorem, ipsum dolor sit amet consectetur adipisicing.</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis consequuntur</p>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis consequuntur, reiciendis aperiam hic architecto officiis? Eius cupiditate laboriosam officia aut!</p>
                                 </div>
                             </div>
                         </div>
@@ -245,10 +405,15 @@
                 <div class="content">
                     <img src="img/goldengolden.png" alt="logo">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nobis!</p>
-                    <span>Email: <a href="#">mail@mail.com</a></span>
+                    <ul class="social_icons">
+                        <li><a href="#"><i class="uil uil-instagram social_icon"></i></a></li>
+                        <li><a href=""><i class="uil uil-twitter-alt social_icon"></i></a></li>
+                        <li><a href=""><i class="uil uil-youtube social_icon"></i></a></li>
+                        <li><a href=""><i class="uil uil-youtube social_icon"></i></a></li>
+                    </ul>
                 </div>
                 <div class="content">
-                    <h4>Our Future</h4>
+                    <h4>Games</h4>
                     <ul>
                         <li><a href="#">Valorant</a></li>
                         <li><a href="#">Code</a></li>
@@ -257,7 +422,7 @@
                     </ul>
                 </div>
                 <div class="content">
-                    <h4>Our Links</h4>
+                    <h4>Links</h4>
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
@@ -266,12 +431,12 @@
                     </ul>
                 </div>
                 <div class="content">
-                    <h4>Our Services</h4>
+                    <h4>Services</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms & COnditions</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
