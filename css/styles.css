@@ -124,33 +124,29 @@ header {
   padding: 5rem 0;
 }
 
-header .swiper-container {
+header .glide__slide .content {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  padding: 1rem;
+  background-color: rgba(196, 196, 196, 0.17);
+  min-height: 450px;
   margin-bottom: 5rem;
 }
 
-header .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffd200 !important;
-}
-
-header .swiper-container .slide {
-  padding: 3rem 0.5rem;
-  background-color: rgba(196, 196, 196, 0.17);
-}
-
-header .swiper-container .slide .grid {
+header .glide__slide .content .grid {
   display: -ms-grid;
   display: grid;
-  gap: 25px;
+  gap: 3rem;
 }
 
-header .swiper-container .slide .grid h2 {
-  font-size: 32px;
-  color: #FFF;
+header .glide__slide .content .grid h2 {
+  color: #f8f9fa;
+  font-size: 3rem;
 }
 
-header .swiper-container .slide .grid p {
-  font-size: 18px;
-  color: #FFF;
+header .glide__slide .content p {
+  color: #f8f9fa;
 }
 
 header .header-cards .grid {
@@ -208,22 +204,36 @@ main section.parceiros h2, main section.parceiros p {
   text-align: center;
 }
 
-main section.parceiros .parceiros-logo .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+main section.parceiros .parceiros_logo {
+  margin-top: 3rem;
 }
 
-main section.parceiros .parceiros-logo .grid .content img {
-  max-width: 100%;
+main section.parceiros .parceiros_logo ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.parceiros .parceiros_logo ul li .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.parceiros .parceiros_logo ul li .content img {
+  max-width: 131px;
   height: auto;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
 
-main section.parceiros .parceiros-logo .grid .content img:hover {
+main section.parceiros .parceiros_logo ul li .content img:hover {
   -webkit-filter: none;
           filter: none;
   -webkit-transition: all 0.3s ease;
@@ -344,11 +354,14 @@ main section.campeonato .section-header p {
   color: #FFF;
 }
 
+main section.campeonato .grid {
+  margin-top: 3rem;
+}
+
 main section.campeonato .grid .info {
   text-align: center;
   padding: 2rem;
   background-color: #FFF;
-  border-radius: 7px 7px 0 0;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -378,6 +391,15 @@ main section.campeonato .grid .info .status h5 {
   margin-top: 0;
 }
 
+main section.campeonato .grid .info a i {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+main section.campeonato .grid .info a:hover i {
+  padding-left: 10px;
+}
+
 main section.campeonato .grid .background {
   width: 100%;
   max-height: 350px;
@@ -395,7 +417,6 @@ main section.campeonato .grid .background .child {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0 0 7px 7px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -414,9 +435,7 @@ main section.equipe {
 main section.equipe .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 1rem;
 }
 
 main section.equipe .grid .content {
@@ -461,6 +480,7 @@ main section.noticias .grid .content {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  position: relative;
 }
 
 main section.noticias .grid .content .card {
@@ -479,6 +499,16 @@ main section.noticias .grid .content .card {
   background-size: 100%;
 }
 
+main section.noticias .grid .content .card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.308);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 main section.noticias .grid .content .card:hover {
   background-size: 110%;
   -webkit-transition: all .5s;
@@ -487,6 +517,7 @@ main section.noticias .grid .content .card:hover {
 
 main section.noticias .grid .content .card .data-info {
   padding: 1rem;
+  z-index: 999;
 }
 
 main section.noticias .grid .content .card .data-info h4 {
@@ -588,7 +619,7 @@ footer .container .grid .content ul li a {
 }
 
 footer .container .grid .content ul li a:hover {
-  color: #545454;
+  color: #ffd200;
   padding-left: 10px;
 }
 
@@ -597,9 +628,6 @@ footer .container .grid .content ul.social_icons {
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 footer .container .grid .content ul.social_icons .social_icon {
@@ -643,41 +671,32 @@ footer .container .grid .content ul.social_icons .social_icon {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .swiper-container {
-    margin-bottom: 5rem;
-  }
-  header .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #ffd200 !important;
-  }
-  header .swiper-container .slide {
-    background-color: rgba(196, 196, 196, 0.17);
-  }
-  header .swiper-container .slide .grid {
+  header .glide__slide .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 150px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    gap: 3rem;
     padding: 2rem;
-    border-radius: 7px;
+    background: rgba(250, 250, 250, 0.25);
+    min-height: 450px;
   }
-  header .swiper-container .slide .grid h2 {
-    font-size: 70px;
-    color: #FFF;
-    margin-bottom: 3rem;
+  header .glide__slide .content .grid {
+    display: -ms-grid;
+    display: grid;
+    gap: 3rem;
   }
-  header .swiper-container .slide .grid p {
-    font-size: 21px;
-    color: #FFF;
+  header .glide__slide .content .grid h2 {
+    color: #f8f9fa;
+  }
+  header .glide__slide .content p {
+    color: #f8f9fa;
+  }
+  header .header-cards {
+    margin-top: 4rem;
   }
   header .header-cards .grid {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
   header .header-cards .grid .content {
     position: relative;
@@ -808,7 +827,7 @@ footer .container .grid .content ul.social_icons .social_icon {
   }
   section.campeonato .grid .info {
     background-color: #FFF;
-    border-radius: 7px 0 0 7px !important;
+    border-radius: 7px;
     padding: 2rem;
     text-align: left !important;
     max-width: 100% !important;
@@ -843,10 +862,20 @@ footer .container .grid .content ul.social_icons .social_icon {
     margin: 0.3rem 0;
     font-size: 17px;
   }
+  section.campeonato .grid .info a:hover i {
+    padding-left: 10px;
+  }
+  section.campeonato .grid .background {
+    border-radius: 0 7px 7px 0 !important;
+  }
   section.campeonato .grid .background img {
     max-width: 100%;
     height: auto;
     border-radius: 7px;
+  }
+  section.equipe .grid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   section.noticias {
     background: #1a1a1a;
@@ -966,10 +995,6 @@ footer .container .grid .content ul.social_icons .social_icon {
     color: #e3e3e3;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-  footer .container .grid .content ul li a:hover {
-    color: #545454;
-    padding-left: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
 </head>
 <body>
     <div class="header" id="header">
@@ -23,28 +24,28 @@
                             <span class="nav__name">Home</span>
                         </a>
                     </li>
-                    
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <span class="nav__name">About</span>
-                        </a>
-                    </li>
     
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <span class="nav__name">Skills</span>
+                            <span class="nav__name">Games</span>
                         </a>
                     </li>
     
                     <li class="nav__item">
                         <a href="#portfolio" class="nav__link">
-                            <span class="nav__name">Notícias</span>
+                            <span class="nav__name">League</span>
                         </a>
                     </li>
     
                     <li class="nav__item">
                         <a href="#contactme" class="nav__link">
-                            <span class="nav__name">Contactme</span>
+                            <span class="nav__name">Notícias</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <span class="nav__name">Contato</span>
                         </a>
                     </li>
                 </ul>
@@ -56,63 +57,38 @@
     <header>
 
         <div class="container">
-            <div class="containerzada swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="content slide ">
-                            <div class="grid">
-                                <div class="grid">
-                                    <h2>Campeonato Golden Ligue 1º Session</h2>
-                                    <a href="#" class="button btn-ler_mais">Inscreva-se <i class="uil uil-arrow-right"></i></a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti consequuntur voluptas excepturi!</p>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="content slide ">
-                            <div class="grid">
-                                <div class="grid">
-                                    <h2>Lorem ipsum dolor sit amet Salve.</h2>
-                                    <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti consequuntur voluptas excepturi!</p>
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="content slide ">
-                            <div class="grid">
-                                <div class="grid">
-                                    <h2>Lorem ipsum dolor sit amet Salve.</h2>
-                                <a href="#" class="button btn-ler_mais">Ler mais <i class="uil uil-arrow-right"></i></a>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti consequuntur voluptas excepturi!</p>
-                            </div> 
-                        </div>
-                    </div>
+            <div class="slide-home glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="content">
+                                    <div class="grid">
+                                        <h2>Campeonato Golden Ligue 1º Session</h2>
+                                        <a href="#" class="button btn-ler_mais">Inscreva-se <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, amet officia. Modi, dolores?<br><br>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim placeat autem commodi?<br><br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti consequuntur voluptas excepturi!</p>
+                            </div>
+                        </li>                        
+                    </ul>
                 </div>
-
-                <div class="swiper-pagination"></div>
-
-
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(156, 152, 166);"><path d="M320 128L192 256l128 128z"></path></svg></button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(156, 152, 166);"><path d="M192 128l128 128-128 128z"></path></svg></button>
+                </div>
             </div>
+
+
             <div class="header-cards">
                 <div class="grid">
-                    <div class="content">
+                    <!-- <div class="content">
                             <div class="icon">
                                 <i class="uil uil-twitter-alt icon-card"></i>
                             </div>
                             <h4>Twich.tv</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deleniti eum, repellat quos consequuntur at.</p>
-                    </div>
+                    </div> -->
                     <div class="content">
                         <div class="icon">
                             <i class="uil uil-heart-alt icon-card"></i>
@@ -145,31 +121,71 @@
                     <h2 class="title" data-title="Todos os nossos">Parceiros</h2>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, labore?</p>
                 </div>
-                <div class="parceiros-logo">
-                    <div class="grid">
-                        <div class="content">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Trovo_Logo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <img src="img/logo_roxx.png" alt="" title="">
-                        </div>
-                        <div class="content">
-                            <img src="https://uploads-ssl.webflow.com/6081a815874f60eff06b34c6/6082d322461586758f9d8c03_PandaPay_Horizontal_SemSlogan_Black.png" alt="" title="">
-                        </div>
-                        <div class="content">
-                            <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
-                        </div>
-                        <div class="content">
-                            <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
-                        </div>
-                        <div class="content">
-                            <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
-                        </div>
-                        <div class="content">
-                            <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
-                        </div>
+                <div class="parceiros_logo glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Trovo_Logo.png" alt="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                     <img src="img/logo_roxx.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://uploads-ssl.webflow.com/6081a815874f60eff06b34c6/6082d322461586758f9d8c03_PandaPay_Horizontal_SemSlogan_Black.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+
+                            <li class="glide__slide">
+                                <div class="content">
+                                    <img src="https://amakbrasil.com.br/wp-content/uploads/2020/06/logo-1-1024x506.png" alt="" title="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 208, 0);"><path d="M320 128L192 256l128 128z"></path></svg></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 208, 0);"><path d="M192 128l128 128-128 128z"></path></svg></button>
                     </div>
                 </div>
+                
             </div>
         </section>
 
@@ -233,21 +249,21 @@
                         <div class="status">
                             <div class="content">
                                 <div class="icon">
-                                    <i class="uil uil-twitter-alt icon-card"></i>
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="4rem" width="4rem" xmlns="http://www.w3.org/2000/svg" style="color: #1a1a1a;"><path d="m 237.59142,23.950128 c -15.48769,9.432598 -34.17058,12.318766 -44.1673,12.318766 -10.00366,0 -23.79926,-0.194925 -43.9503,-11.829131 -8.35467,-4.823577 -9.86134,-5.708699 -14.34686,-5.708699 -12.91322,0 -71.396413,58.375934 -72.363034,66.334414 -0.966622,7.958452 32.120593,28.163932 33.71248,57.150952 1.591887,28.98703 -19.183619,61.80636 -27.756183,87.39706 -17.765566,52.9498 -22.581636,58.94861 -22.581622,85.85861 3.91678,77.65208 56.609859,131.68607 130.916129,144.25034 31.84641,4.83094 44.87352,9.46439 59.11229,21.0237 5.93519,4.34906 12.47815,10.68983 19.74398,11.52033 l 0,0.0278 c 0.0299,-0.003 0.0591,-0.01 0.089,-0.0142 0.0299,0.003 0.0591,0.0114 0.089,0.0142 l 0,-0.0278 c 7.26582,-0.8305 13.80879,-7.17127 19.74397,-11.52033 14.23877,-11.55931 27.26588,-16.19276 59.11229,-21.0237 74.30628,-12.56427 126.99934,-66.59826 130.91614,-144.25034 0,-26.91 -4.81606,-32.90881 -22.58162,-85.85861 -8.57257,-25.5907 -29.34807,-58.41003 -27.75619,-87.39706 1.59189,-28.98702 34.6791,-49.1925 33.71248,-57.150952 -0.96662,-7.95848 -59.44983,-66.334414 -72.36304,-66.334414 -4.48553,0 -5.99218,0.885122 -14.34685,5.708699 -20.15104,11.634206 -33.94664,11.829131 -43.95031,11.829131 -9.99671,0 -28.6796,-2.886168 -44.16729,-12.318766 -4.52967,-2.74526 -10.03057,-5.344254 -18.40861,-5.344254 -6.60122,0 -13.34704,2.294383 -18.4086,5.344254 z"></path></svg>
                                 </div>
                                 <span>20</span>
                                 <h5>Times</h5>
                             </div>
                             <div class="content">
                                 <div class="icon">
-                                    <i class="uil uil-twitter-alt icon-card"></i>
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="react-icons" height="4rem" width="4rem" xmlns="http://www.w3.org/2000/svg" style="color: #1a1a1a;"><path d="M231.151 109.415l14.847 14.847-120.374 120.374-14.847-14.847L231.15 109.415zm28.854 28.854l-17.447 17.447 17.447-17.447zm-54.452 54.452l17.877 1.49-19.443 19.442-17.879-1.487 19.445-19.445zm131.116-83.735l21.153 4.464 16.336-16.336 15.425 15.425-148.478 148.478a4.47 4.47 0 0 0-.919 1.339l-77.504 173.873a4.457 4.457 0 0 0 1.024 5.07l13.474 12.632a4.457 4.457 0 0 1 .105 6.408l-31.235 31.236a4.457 4.457 0 0 1-5.735.482L58.1 434.654a28.377 28.377 0 0 1-3.835-43.265l282.403-282.403zm117.075-89.868L466 31.375 432.374 65l-2.091-2.091-31.158 31.157-8.474-8.474 31.157-31.157-1.69-1.691 33.626-33.627zM293.869 236.266l.086-.034-.06.06-.026-.025zm.026.026l10.26 10.26-.333.334c-1.96 1.961-11.94 12.221-11.6 17.448.745 11.162 11.276 44.544 21.562 48.475l5.962-5.963c11.653-11.827 10.91-18.176 10.191-24.304-1.742-14.821-8.08-50.697-11.678-70.614l11.415-11.415c2.81 15.4 11.312 62.35 13.431 80.471 1.112 9.517.955 20.058-13.884 35.142l-12.747 12.747-13.746 13.745-4.298 4.299s-34.617-27.052-32.288-58.551c.56-7.669-5.96-12.967-9.62-13.877l.664-1.488 36.709-36.709zm86.854-83.123l51.854 51.853-14.849 14.848-51.853-51.853 14.848-14.848zM222.09 351.556l64.269 36.025-27.096 48.35-59.837-33.54 22.664-50.835z"></path></svg>
                                 </div>
                                 <span>+350</span>
                                 <h5>Kills</h5>
                             </div>
                             <div class="content">
                                 <div class="icon">
-                                    <i class="uil uil-twitter-alt icon-card"></i>
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="react-icons" height="4rem" width="4rem" xmlns="http://www.w3.org/2000/svg" style="color: #1a1a1a;"><path fill-rule="evenodd" d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 100-6 3 3 0 000 6zm-5.784 6A2.238 2.238 0 015 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 005 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" clip-rule="evenodd"></path></svg>
                                 </div>
                                 <span>130</span>
                                 <h5>Membros</h5>
@@ -447,7 +463,50 @@
     </footer>
 
 
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/glide.min.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+        new Glide('.parceiros_logo', {
+            type: 'carousel',
+            perView: 5,
+            slidesToScroll: 'auto',
+            
+            breakpoints:{
+                1200:{
+                    perView: 5
+                },
+                800:{
+                    perView: 3
+                },
+                560:{
+                    perView: 2
+                }
+            }
+        }).mount();
+        
+    </script>
+
+
+<script>
+    new Glide('.slide-home', {
+        type: 'carousel',
+        perView: 1,
+        slidesToScroll: 'auto',
+        
+        breakpoints:{
+            1200:{
+                perView: 1
+            },
+            800:{
+                perView: 1
+            },
+            560:{
+                perView: 1
+            }
+        }
+    }).mount();
+    
+</script>
 </body>
 </html>
